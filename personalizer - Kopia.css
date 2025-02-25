@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: black;
+    margin: 0;
+    padding: 0;
+    transition: background 0.3s ease, color 0.3s ease, font-family 0.3s ease;
+}
+header {
+    margin: 20px;
+}
+nav {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+}
+nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    cursor: pointer;
+}
+nav a:hover {
+    text-decoration: none;
+}
+
+
+.dropdown {
+    display: none;
+    position: absolute;
+    background: white;
+    color: black;
+    padding: 15px;
+    border: 1px solid #ccc;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 60px;
+}
+
+
+.dropdown * {
+    color: black !important;
+}
+
+.ops {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.bg-color, .text-color, .text-size-btn, .font-btn {
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.bg-color[data-color="red"] { background: red; }
+.bg-color[data-color="green"] { background: lightgreen; }
+.bg-color[data-color="blue"] { background: lightblue; }
+.bg-color[data-color="gray"] { background: gray; }
+.bg-color[data-color="white"] { background: white; }
+
+.text-color[data-color="red"] { background: red; }
+.text-color[data-color="black"] { background: black; color: white; }
+.text-color[data-color="blue"] { background: blue; }
+.text-color[data-color="white"] { background: white; border: 1px solid black; color: black; }
+.text-color[data-color="green"] { background: green; }
+

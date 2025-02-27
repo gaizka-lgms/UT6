@@ -3,32 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form.css">
     <title>Document</title>
 </head>
 <body>
-    <div id="navbar">
-        <div id="personalizer">
-            <a href="personalizer.html">Personalizer</a>
+    <nav>
+        <a href="personalizer - Kopia.css">Personalizer</a>
+        <a href="form.css">Form</a>
+        <a href="images.html">Images</a>
+        <a href="#" id="modeToggle">Mode</a>
+    </nav>
+    <form>
+        <label for="name">Full Name:</label>
+        <input type="text" id="fullName" placeholder="Enter your  name">
 
-        </div>
-        <div id="from">
-            <a href="form.html">Form</a>
-            
-        </div>
-        <div id="images">
-            <a href="images.html">Images</a>
-            
-        </div>
-        <div id="Mode">
-            <a href="">Mode</a>
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="example@example.example">
+        <span id="emailValidation"></span>
 
-
-        </div>
-        <div>
-            
-
+        <label>Gender:</label>
+        <div class="gender">
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Other</label>
         </div>
 
-    </div> 
+        <label for="country">Country:</label>
+        <select id="country" onchange="showProvince()">
+            <option value="">Select your country</option>
+            <option value="spain">Spain</option>
+            <option value="us">United States</option>
+            <option value="mx">Mexico</option>
+        </select>
+
+        <div id="province" class="hidden">
+            <label for="province">Province:</label>
+            <select id="province1" onchange="showTown()">
+                <option value="">Select your province</option>
+            </select>
+        </div>
+
+        <div id="place" class="hidden">
+            <label for="town">Town:</label>
+            <select id="town">
+                <option value="">Select your town</option>
+            </select>
+        </div>
+
+        <button type="submit">Send</button>
+    </form>
 </body>
 </html>

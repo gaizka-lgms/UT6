@@ -23,3 +23,52 @@ nav a {
 nav a:hover {
     text-decoration: none;
 }
+p {
+    margin-top: 20px;
+    color: rgb(225, 61, 140);
+    text-align: left; 
+}
+
+.magicbtn {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    text-align: left;
+}
+
+#imageContainer img {
+    max-width: 500px;
+    height: auto;
+    display: none;
+}
+
+#imageContainer img.show {
+    display: block;
+}
+body.dark-mode {
+    background-color: black;
+    color: white;
+}
+body.dark-mode nav {
+    background-color: black;
+}
+body.dark-mode .magicbtn {
+    background-color: rgb(147, 140, 140);
+    color: #633e3e;
+}
+body.dark-mode p {
+    color: #ff1e9e; 
+}
+body.dark-mode #magicButton, body.dark-mode #changeImageButton {
+    background-color: #444;
+    color: #fff;
+}
+body.dark-mode #magicButton:hover, body.dark-mode #changeImageButton:hover {
+    background-color: #666;
+}
+#randomImage{
+    width:300px; height:auto; display:block; margin-top:20px;
+}

@@ -68,7 +68,8 @@
                 <option class="bizkaia" value="Er">Erandio</option>
                 <option class="sevilla" value="Sev">Sevilla</option>
                 <option class="sevilla" value="Alc">Alcalá de Guadaíra</option>
-                <option class="sevilla" value="Coria">Coria del Río</option>                <option class="madrid-town" value="Mad">Madrid</option>
+                <option class="sevilla" value="Coria">Coria del Río</option>               
+                <option class="madrid" value="Mad">Madrid</option>
                 <option class="madrid" value="Alc">Alcobendas</option>
                 <option class="madrid" value="Get">Getafe</option>
                 <option class="barcelona" value="Bar">Barcelona</option>
@@ -79,7 +80,8 @@
                 <option class="serbia" value="NoviSad">Novi Sad</option>
                 <option class="kosovo" value="Prist">Pristina</option>
                 <option class="kosovo" value="Mitro">Mitrovica</option>
-                <option class="kosovo" value="Fer">Ferizaj</option>                <option class="sprska-town" value="Banjaluka">Banjaluka</option>
+                <option class="kosovo" value="Fer">Ferizaj</option>                
+                <option class="sprska" value="Banjaluka">Banjaluka</option>
                 <option class="sprska" value="Bijel">Bijeljina</option>
                 <option class="sprska" value="Doboj">Doboj</option>
                 <option class="bosnia" value="Sar">Sarajevo</option>
@@ -116,7 +118,7 @@ document.getElementById("email").addEventListener("input", isthemailvalid);
     let provinceDiv = document.getElementById("province");
     let provinceSelect = document.getElementById("province1");
     
-    provinceSelect.innerHTML = ""; // Limpiar opciones previas
+    provinceSelect.innerHTML = ""; 
     provinceDiv.classList.remove("hidden");
     
     switch (country) {

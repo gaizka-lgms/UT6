@@ -8,8 +8,8 @@
 </head>
 <body>
     <nav>
-        <a href="personalizer - Kopia.css">Personalizer</a>
-        <a href="form.css">Form</a>
+        <a href="personalizer - Kopia.html">Personalizer</a>
+        <a href="form.html">Form</a>
         <a href="images.html">Images</a>
         <a href="#" id="mode">Mode</a>
     </nav>
@@ -33,48 +33,74 @@
 
         <label for="country">Country:</label>
         <select id="country" onchange="showProvince()">
-            <option value="">Select your country</option>
-            <option value="spain">Spain</option>
-            <option value="na">Yugoslavia</option>
-            <option value="eh">Euskal Herria</option>
+            <option class="spain" value="spain">Spain</option>
+            <option class="yugos" value="na">Yugoslavia</option>
+            <option class="eh" value="eh">Euskal Herria</option>
         </select>
 
         <div id="province" class="hidden">
             <label for="province">Province:</label>
             <select id="province1" onchange="showTown()">
-                <option value="gi">Gizpuzkoa</option>
-                <option value="ar">Araba</option>
-                <option value="bi">Bizkaia</option>
-                <option value="se">Sevilla</option>
-                <option value="ma">Madrid</option>
-                <option value="bcn">Barcelona</option>
-                <option value="ser">Serbia</option>
-                <option value="ko">Kosovo</option>
-                <option value="sk">Sprska</option>
-                <option value="bo">Bosnia</option>
-
-
+                <option class=" eh gipuzkoa " value="gi">Gizpuzkoa</option>
+                <option class=" eh araba" value="ar">Araba</option>
+                <option class="eh bizkaia" value="bi">Bizkaia</option>
+                <option class="spain sevilla" value="se">Sevilla</option>
+                <option class="spain madrid" value="ma">Madrid</option>
+                <option class="spain barcelona" value="bcn">Barcelona</option>
+                <option class="yugos serbia" value="ser">Serbia</option>
+                <option class="yugos kosovo" value="ko">Kosovo</option>
+                <option class="yugos sprska" value="sk">Sprska</option>
+                <option class="yugos bosnia" value="bo">Bosnia</option>
             </select>
         </div>
-
+        
         <div id="place" class="hidden">
-            <label for="town">Town:</label>
-            <select id="town">
-                <option value="Ir">Irun</option>
-                <option value="To">Tolosa</option>
-                <option value="Be">Beasain</option>
-                <option value="vi">Vitoria-Gasteiz</option>
-                <option value="ca">Campezu</option>
-                <option value="Ll">LLodio</option>
-                <option value="Bg">Belgrade</option>
-                <option value="Ir">Irun</option>
-
-
-
+            <label for="cities">Town:</label>
+            <select id="cities" class="cities">
+                <option class="gipuzkoa"  class="" value="Ir">Irun</option>
+                <option class="gipuzkoa" value="To">Tolosa</option>
+                <option class="gipuzkoa" value="Be">Beasain</option>
+                <option class="araba" value="vi">Vitoria-Gasteiz</option>
+                <option class="araba" value="ca">Campezu</option>
+                <option class="araba" value="Ll">LLodio</option>
+                <option class="bizkaia" value="Bil">Bilbao</option>
+                <option class="bizkaia" value="Get">Getxo</option>
+                <option class="bizkaia" value="Er">Erandio</option>
+                <option class="sevilla" value="Sev">Sevilla</option>
+                <option class="sevilla" value="Alc">Alcalá de Guadaíra</option>
+                <option class="sevilla" value="Coria">Coria del Río</option>               
+                <option class="madrid" value="Mad">Madrid</option>
+                <option class="madrid" value="Alc">Alcobendas</option>
+                <option class="madrid" value="Get">Getafe</option>
+                <option class="barcelona" value="Bar">Barcelona</option>
+                <option class="barcelona" value="Bad">Badalona</option>
+                <option class="barcelona" value="Lle">L'Hospitalet de Llobregat</option>
+                <option class="serbia" value="Bel">Belgrade</option>
+                <option class="serbia" value="Nis">Niš</option>
+                <option class="serbia" value="NoviSad">Novi Sad</option>
+                <option class="kosovo" value="Prist">Pristina</option>
+                <option class="kosovo" value="Mitro">Mitrovica</option>
+                <option class="kosovo" value="Fer">Ferizaj</option>               
+                <option class="sprska" value="Banjaluka">Banjaluka</option>
+                <option class="sprska" value="Bijel">Bijeljina</option>
+                <option class="sprska" value="Doboj">Doboj</option>
+                <option class="bosnia" value="Sar">Sarajevo</option>
+                <option class="bosnia" value="Zen">Zenica</option>
+                <option class="bosnia" value="Tuz">Tuzla</option>
             </select>
         </div>
 
         <button type="submit">Send</button>
     </form>
+    <script>
+          document.getElementById('mode').addEventListener('click', function() { 
+            document.body.classList.toggle('dark-mode'); 
+        });
+        function validateEmail(email) {
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(String(email).toLowerCase());
+        }
+
+    </script>
 </body>
 </html>

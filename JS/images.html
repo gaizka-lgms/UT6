@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="images.css">
+    <title>Images</title>
+</head>
+<body>
+    <nav>
+        <a href="personalizer - Kopia.html">Personalizer</a>
+        <a href="form.html">Form</a>
+        <a href="images.html">Images</a>
+        <a href="#" id="mode">Mode</a>
+    </nav> 
+    <div class="magicbtn">
+        <p>Magic Button: Create & Change Image</p>
+        <button id="changeimg">Change Image</button> 
+        <div id="images">
+            <img id="randomImage">  
+        </div>
+    </div>
+
+    <div class="magicbtn">
+        <p>AutoLoading</p>
+        <div id="randomimglist">
+            <img id="images"> 
+        </div>
+    </div>
+    
+    <script>
+        const images = [
+            "Bosnia.png",
+            "Euskal_Herria.jpg",
+            "Kosovo.png",
+            "Serbia.png",
+            "Sprska.png"
+
+        ];
+        const button = document.getElementById('changeimg');
+        const imageElement = document.getElementById('randomImage');  
+
+        button.addEventListener('click', function imgs () {
+            const randomimglist = Math.floor(Math.random() * images.length);
+            const randomImage = images[randomimglist];
+            imageElement.src = randomImage; 
+            
+
+        }, 2000);
+        const bosniaSong = new Audio("Bosnian Folk Song - Bosanska Artiljerija.mp3");
+
+function playBosniaSong(randomImage) {
+    if (randomImage === "Bosnia.png") {
+        bosniaSong.play();
+    } else {
+        bosniaSong.pause();
+        bosniaSong.currentTime = 0;
+    }
+}
+
+        document.getElementById('mode').addEventListener('click', function() { 
+            document.body.classList.toggle('dark-mode'); 
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: black;
+    margin: 0;
+    padding: 0;
+    
+}
+header {
+    margin: 20px;
+}
+nav {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+}
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    cursor: pointer;
+}
+nav a:hover {
+    text-decoration: none;
+}
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 400px;
+    margin: 20px auto;
+    box-shadow: 0 1px 0 rgba(166, 161, 161, 0.2);
+}
+label {
+    display: block;
+    margin-top: 10px;
+}
+input, select, button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid gainsboro;
+    box-sizing: border-box;
+}
+button {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+.hidden {
+    display: none;
+}
+.gender {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 5px;
+}
+.gender input {
+    width: auto;
+}
+
+body.dark-mode {
+    background-color: black;
+    color: white;
+}
+body.dark-mode nav {
+    background-color: black;
+}
+body.dark-mode nav {
+    background-color: #333;
+}
+body.dark-mode form {
+    background-color: #333;
+    color: #fff;
+}
+body.dark-mode input, body.dark-mode select, body.dark-mode button {
+    background-color: #444;
+    color: #fff;
+    border-color: #555;
+}
+body.dark-mode button {
+    background-color: #555;
+
+}
+#emailValidation {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
